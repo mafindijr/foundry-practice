@@ -12,8 +12,10 @@ contract HelloWorldTest is Test {
         helloWorld = new HelloWorld();
     }
 
-    function test_Increment() public {
-        counter.increment();
-        assertEq(counter.number(), 1);
+    function testGreet() public view {
+        assertEq(
+            helloWorld.greet(),
+            "Hello World!"
+        );
     }
 }
